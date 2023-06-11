@@ -1,15 +1,19 @@
 @extends('layouts/main')
 @section('contenido')
     <p class="fs-2 text-center mt-4"><td class="icocod">&#128101;</td> Agregar alumno</p>
-    
+    <a href="/" class="btn btn-info btn-block mt-3 col-12">
+        <td class="icocod">&#9194;</td> Regresar
+    </a>
     <form class="row g-3 fs-4" action="store" method="post">
         @csrf
         @method('POST')
         <div class="col-md-6 mt-4">
+            <br>
             <label for="nombre_alumno" class="form-label">Nombre del alumno <td class="icocod">&#128221;</td></label>
             <input type="text" name="nombre_alumno" id="nombre_alumno" class="form-control" required>
         </div>
         <div class="col-md-6 mt-4">
+            <br>
             <label for="numero_control" class="form-label">Numero control <td class="icocod">&#9997;</td></label>
             <input type="number" name="numero_control" id="numero_control" class="form-control" required>
         </div>

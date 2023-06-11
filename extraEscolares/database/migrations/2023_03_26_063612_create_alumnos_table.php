@@ -22,7 +22,17 @@ class CreateAlumnosTable extends Migration
             $table->date('fecha_nacimiento');
             $table->string('escuela_anterior');
             $table->date('fecha_ingreso');
+            $table->integer('horaCivica')->nullable()->default(0);
+            $table->integer('horaDeportiva')->nullable()->default(0);
+            $table->integer('horaCultural')->nullable()->default(0);
+            $table->string('ubicacionFisicaCultural')->nullable();
+            $table->string('ubicacionFisicaDeportiva')->nullable();
+            $table->string('ubicacionFisicaCivica')->nullable();
+            $table->string('eventoTallerCivico')->nullable();
+            $table->string('eventoTallerDeportiva')->nullable();
+            $table->string('eventoTallerCultural')->nullable();
             $table->timestamps();
+           
 
         });
     }

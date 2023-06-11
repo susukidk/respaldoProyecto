@@ -26,6 +26,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/crud/datos_A/{id}', [AltasBajas::class, 'datos_A'])->name('datos_A');
     Route::get('/misArchivos/tabla', [AltasBajas::class, 'tabla'])->name('tabla');
 
-    Route::get('/misArchivos/agregarArchivo/{id}', [Archivos::class, 'create'])->name('agregarArchivo');
-    Route::post('/misArchivos/guardarArchivo/{id}', [Archivos::class, 'store'])->name('guardarArchivo');
+    Route::post('/misArchivos/store/{id}', [AltasBajas::class, 'store'])->name('store');
+    Route::put('/misArchivos/update/{id}', [AltasBajas::class, 'updateArchivo'])->name('updateArchivo');
+    Route::get('/verArchivos', [AltasBajas::class, 'verArchivos'])->name('verArchivos');
+    Route::get('/verArchivos/{id}', [AltasBajas::class, 'verArchivos'])->name('verArchivos');
+
 });

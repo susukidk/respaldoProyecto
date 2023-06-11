@@ -117,10 +117,15 @@ body {
             <!-- End Pokemon Ball Top Part -->
             <!-- Start Main Forms -->
             <div class="main-forms fs-3">
+                <a href="/" class="btn btn-info btn-block mt-3 col-12">
+                    <td class="icocod">&#9194;</td> Regresar
+                </a>
                 <div class="signup-form">
+                    <p></p>
                     <form class="sign-back" action="agregarNuevo" method="POST">
                         @csrf
                         @method('POST')
+                        
                         <h1>Agregar usuario</h1>
                         <div class="signup-row">
                             <i class="fa fa-user"></i>

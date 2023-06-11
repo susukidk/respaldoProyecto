@@ -32,7 +32,7 @@
                         <td>{{ $item->escuela_anterior }}</td>
                         <td>{{ $item->fecha_ingreso }}</td>
                         <td> 
-                            <a href="{{ route('datos_A', $item->id) }}" class="btn btn-danger">Subir archivos</a>
+                            <a href="{{ route('datos_A', $item->id) }}" class="btn btn-success">Subir archivos</a>
                         </td>
                         <td>
                             <a href="{{ route('edit', $item->id) }}" class="btn btn-warning">Editar</a>
@@ -47,23 +47,17 @@
             </table>
         </div>
     </div>
-@endsection
-@push('scripts')
+    
     <script>
         $(document).ready(function() {
             var table = $('#tabla').DataTable({
-                scrollY: 500,
+                scrollY: 450,
                 deferRender: false,
                 scroller: true,
                 responsive: true,
-                columnDefs: [
-                    {
-                        className: 'control',
-                        orderable: false,
-                        targets: -1
-                    }
-                ]
+                
             });
         });
     </script>
-@endpush
+    
+@endsection
